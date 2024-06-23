@@ -5,26 +5,27 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Lab1 extends JFrame {
-    private JSlider slider1;
-    private JPanel panel;
-    private JButton startThreadsButton;
-    private JLabel prior1Label;
-    private JSpinner spinner1;
-    private JLabel priority2Label;
-    private JSpinner spinner2;
-    private JPanel panelA;
+    /* GUI elements */
+    private JSlider     slider1;
+    private JPanel      panel;
+    private JLabel      prior1Label;
+    private JSpinner    spinner1;
+    private JLabel      priority2Label;
+    private JSpinner    spinner2;
+    private JPanel      panelA;
+    private JPanel      panelB;
+    private JSeparator  tasksSepar;
+    private JButton     startThreadsButton;
+    private JButton     buttonStart1;
+    private JButton     buttonStart2;
+    private JButton     buttonStop1;
+    private JButton     buttonStop2;
 
-    private JPanel panelB;
-    private JSeparator tasksSepar;
-    private JButton buttonStart1;
-    private JButton buttonStart2;
-    private JButton buttonStop1;
-    private JButton buttonStop2;
+    /* Threads elements */
 
-    private Thread puller1;
-    private Thread puller2;
-
-    private int semaphore;
+    private Thread  puller1;
+    private Thread  puller2;
+    private int     semaphore;
     private Thread setThread(int num){
         if(num == 1) {
             return new Thread(new Runnable() {
